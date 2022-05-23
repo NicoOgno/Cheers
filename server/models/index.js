@@ -12,4 +12,6 @@ mongoose.connect(DBURL, {
   } else {
     console.log(`Database connected at port ${DBPORT}`)
   }
-})
+});
+
+module.exports = mongoose;

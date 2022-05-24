@@ -1,4 +1,4 @@
-const { Schema } = require('./index');
+// const { Schema } = require('./index');
 const mongoose = require('./index');
 
 const CocktailSchema = new mongoose.Schema({

@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv').config();
 
-const PORT = process.env.SERVER_PORT || 5000;
+const server = require('./graphql/index');
+const PORT = process.env.SERVER_PORT || 500;
 
-app.use('/', (req, res) => res.send('<h1>Here we are<h1/>'))
+(async () => {
+  await server.start();
+  server.applyMiddleware({ app })
+})();
 
 
 app.listen(PORT, () => console.log(`Listening at port ${PORT}`));

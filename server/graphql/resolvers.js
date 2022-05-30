@@ -10,7 +10,7 @@ const UserDB = require('../models/user');
 const authMiddleware = require('../middleware/auth');
 const { validateRegisterInput, validateLoginInput } = require('../util/validators');
 const SECRET = process.env.SECRET_KEY || 'This is not safe';
-const cheersCocktails = process.env.CHEERS;
+const cheersCocktails = process.env.CHEERS || 'cheersCocktails';
 
 const getADrink = async (_, args) => {
   try {
@@ -40,7 +40,7 @@ const getAList = async (_, args) => {
 
 const getTheCheers = async () => {
   try {
-    const drinks = await CocktailDB.find({ author: cheersCocktails });
+    const drinks = await CocktailDB.find({cocktail: { author: cheersCocktails }});
   return drinks;
   } catch (error) {
     console.log(`${error} in resolvers`);
@@ -51,7 +51,6 @@ const createCocktail = async (_, { cocktailInput: { name, alcohol, recipe, diffi
   try {
     const user = authMiddleware(context);
     const { username } = user;
-    console.log(user, 'this is the user');
     const drinkUniqueName = await CocktailDB.findOne({name});
 
     if (drinkUniqueName) {
@@ -93,8 +92,7 @@ const registerUser = async (_, { registerInput: { username, email, password, con
       email: newUser.email,
       username: newUser.username
     }, SECRET, { expiresIn: '2h'});
-    // TODO erase this console log
-console.log(newUser);
+
     return {
       ...newUser._doc,
       id: newUser._id,
@@ -141,7 +139,6 @@ const getUserCocktails = async (_, args) => {
     }
     const authorCocktails = await CocktailDB.find({ author: args.author });
     if (authorCocktails.length < 1) {
-      console.log(authorCocktails);
       throw new Error('No cocktails found', {
         errors: {
           cocktailError: 'Cocktail not found'

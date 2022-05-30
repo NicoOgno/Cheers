@@ -4,28 +4,28 @@ const dotenv = require('dotenv').config();
 
 const adminCocktails = [
   {
-    author: 'cheers',
+    author: 'cheersCocktails',
     name: 'Gin Tonic',
     alcohol: 'Gin',
     recipe: 'Gin, tonic, ice and lemon peel',
     difficulty: 'moderate'
   },
   {
-    author: 'cheers',
+    author: 'cheersCocktails',
     name: 'Pisco Sour',
     alcohol: 'Pisco',
     recipe: '3 of pisco, 1 of sugar syrup and 1 of lemon',
     difficulty: 'difficult'
   },
   {
-    author: 'cheers',
+    author: 'cheersCocktails',
     name: 'Margarita',
     alcohol: 'Tequila',
     recipe: '2 of tequila, 1 of triple sec, 1 of lemon, salt and ice',
     difficulty: 'moderate'
   },
   {
-    author: 'cheers',
+    author: 'cheersCocktails',
     name: 'Lemmy',
     alcohol: 'Jack Daniels',
     recipe: '2 ounces of Jack Daniels, 10 ounces of coke and a bit of angostura bitters',

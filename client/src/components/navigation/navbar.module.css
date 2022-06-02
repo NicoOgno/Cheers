@@ -1,0 +1,28 @@
+.navigation {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: #EFE2BA;
+  box-shadow: inset 0px 10px 27px -8px #4056A1, inset 0px -10px 27px -8px #C5CBE3;
+}
+
+.brandName {
+  color: #C50000;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+.navigationMenu {
+  margin-left: auto;
+}
+
+.navigationMenu ul {
+  display: flex;
+  padding: 0;
+}
+.navigationMenu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}

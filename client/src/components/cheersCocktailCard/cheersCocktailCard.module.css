@@ -1,21 +1,6 @@
-.wrapper {
-  position: relative;
-  display:inline-flex;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  grid-gap: 1rem;
-}
-
 .card {
-  position: relative;
   width: 250px;
   height: 200px;
-  flex-wrap: wrap;
-  flex-direction: column-reverse;
   border: 2px solid #EFE2BA;
   border-radius: 5%;
   padding: .5rem;

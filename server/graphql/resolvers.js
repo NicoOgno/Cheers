@@ -20,7 +20,7 @@ const getADrink = async (_, args) => {
     const drink = await CocktailDB.findOne({name: args.name});
   return drink;
   } catch (error) {
-    console.log(`${error} in resolvers`);
+    console.log(`${error}`);
   }
 
 };
@@ -33,7 +33,7 @@ const getAList = async (_, args) => {
     const drinkList = await CocktailDB.find({alcohol: args.alcohol});
   return drinkList;
   } catch (error) {
-    console.log(`${error} in resolvers`);
+    console.log(`${error}`);
   }
 
 };
@@ -43,7 +43,7 @@ const getTheCheers = async () => {
     const drinks = await CocktailDB.find({cocktail: { author: cheersCocktails }});
   return drinks;
   } catch (error) {
-    console.log(`${error} in resolvers`);
+    console.log(`${error}`);
   }
 };
 
@@ -60,7 +60,7 @@ const createCocktail = async (_, { cocktailInput: { name, alcohol, recipe, diffi
     const drink = await CocktailDB.create({ author: username, name, alcohol, recipe, difficulty });
     return drink;
   } catch (error) {
-    console.log(`${error} in resolvers`);
+    console.log(`${error}`);
   }
 
 };
@@ -128,7 +128,7 @@ const userLogin = async (_, { username, password }) => {
       token
     }
   } catch (error) {
-    console.log(`${error} in resolvers`);
+    console.log(`${error}`);
   }
 };
 
@@ -147,7 +147,7 @@ const getUserCocktails = async (_, args) => {
     }
     return authorCocktails;
   } catch (error) {
-    console.log(`${error} in resolvers.`);
+    console.log(`${error}`);
   }
 };
 

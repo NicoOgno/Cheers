@@ -35,5 +35,5 @@ export default function CheersCocktailList() {
 
   return (
     <div className={styles.cards}>{cheersList}</div>
-  )
+  );
 }

@@ -1,0 +1,35 @@
+/* TODO find font-family */
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 70%;
+  margin-top: 85px;
+}
+
+.registerInput {
+  background: #C5CBE3;
+  color: #FFFFFF;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 2.5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  min-width: 50%;
+  min-height: 45px;
+  letter-spacing: 2.5px;
+  padding-left: 25px;
+}
+
+.registerButton {
+  background: linear-gradient(180deg, #4056A1 0%, #C5CBE3 100%);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 10px;
+  min-width: 20%;
+  min-height: 40px;
+  font-size: large;
+  letter-spacing: 1px;
+  margin-top: 35px;
+}
